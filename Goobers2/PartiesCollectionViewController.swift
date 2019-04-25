@@ -18,7 +18,7 @@ let p1 = Party(name: "Birthday", date: "April 20, 2019", desc: "It's my birthday
 
 
 
-
+//Class for showing all parties 
 class PartiesCollectionViewController: UICollectionViewController {
     
     
