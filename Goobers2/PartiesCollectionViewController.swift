@@ -18,7 +18,7 @@ import UIKit
 
 
 
-
+//Class for showing all parties 
 class PartiesCollectionViewController: UICollectionViewController {
 
 
