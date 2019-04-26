@@ -69,7 +69,10 @@ class PartiesCollectionViewController: UICollectionViewController {
             }
             
             cell.button.isEnabled = true
-            cell.button.setTitle("I'm Bringing Something!", for: .normal)
+            cell.button.setTitle("Edit", for: .normal)
+            cell.button.addTarget(self, action: #selector(showDrinks), for: .touchUpInside)
+            
+            
         }
         if indexPath.row == 3 {
             cell.title.text = "Music"
@@ -98,6 +101,9 @@ class PartiesCollectionViewController: UICollectionViewController {
         
     }
     
+    @objc func showDrinks(sender: UIButton!){
+        performSegue(withIdentifier: "drinks", sender: nil)
+    }
     
 }
 

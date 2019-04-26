@@ -17,6 +17,7 @@ class PartiesViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //reutrn the length
         return 2
     }
     

@@ -103,7 +103,7 @@
         <!--Parties View Controller-->
         <scene sceneID="HJh-8W-abi">
             <objects>
-                <tableViewController id="8bW-7C-DMd" customClass="PartiesViewController" customModule="Goobers" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="8bW-7C-DMd" customClass="PartiesViewController" customModule="Goobers2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ItJ-3T-YL0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +117,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="party" rowHeight="152" id="5Z3-LE-kG6" customClass="PartyTableViewCell" customModule="Goobers" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="party" rowHeight="152" id="5Z3-LE-kG6" customClass="PartyTableViewCell" customModule="Goobers2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="414" height="152"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Z3-LE-kG6" id="f3O-3Z-jIw">
@@ -194,7 +194,7 @@
         <!--Parties Collection View Controller-->
         <scene sceneID="538-9y-DmV">
             <objects>
-                <collectionViewController id="3b0-hy-ucq" customClass="PartiesCollectionViewController" customModule="Goobers" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="3b0-hy-ucq" customClass="PartiesCollectionViewController" customModule="Goobers2" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4ti-ZZ-diU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,7 +206,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="summary" id="lp4-Er-Z5E" customClass="CustomCollectionViewCell" customModule="Goobers" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="summary" id="lp4-Er-Z5E" customClass="CustomCollectionViewCell" customModule="Goobers2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="294"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -249,10 +249,13 @@
                             <outlet property="delegate" destination="3b0-hy-ucq" id="Gpl-BK-DFd"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <segue destination="m0g-SN-2P3" kind="show" identifier="drinks" id="EIG-mG-nDW"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Se-G7-b2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1423.1884057971015" y="-256.47321428571428"/>
+            <point key="canvasLocation" x="1457" y="-288"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YMw-f7-wa3">
@@ -316,6 +319,96 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gvb-iz-Rrt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1309" y="-1063"/>
+        </scene>
+        <!--Drink View Controller-->
+        <scene sceneID="LqK-Ed-wol">
+            <objects>
+                <viewController id="m0g-SN-2P3" customClass="DrinkViewController" customModule="Goobers2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="voE-ZA-57W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What alcohol do you prefer in your cocktails?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYx-Y1-RLV">
+                                <rect key="frame" x="20" y="96" width="374" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Alcohol" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vMm-oh-QSu">
+                                <rect key="frame" x="20" y="140" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kh9-An-y6l">
+                                <rect key="frame" x="0.0" y="216" width="414" height="646"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ank-GP-G3s">
+                                    <size key="itemSize" width="414" height="218"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="drink" id="mDt-Ih-WCJ" customClass="DrinkCollectionViewCell" customModule="Goobers2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="218"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="218"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y3k-vk-Icl">
+                                                    <rect key="frame" x="46" y="0.0" width="322" height="169"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="169" id="Bff-Ut-qcp"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR6-xc-yQc">
+                                                    <rect key="frame" x="38" y="177" width="338" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="cR6-xc-yQc" secondAttribute="trailing" constant="30" id="4Jk-Sw-ghP"/>
+                                            <constraint firstItem="cR6-xc-yQc" firstAttribute="leading" secondItem="mDt-Ih-WCJ" secondAttribute="leadingMargin" constant="30" id="MoO-hh-y94"/>
+                                            <constraint firstItem="y3k-vk-Icl" firstAttribute="leading" secondItem="mDt-Ih-WCJ" secondAttribute="leading" constant="46" id="VF7-1w-Wc7"/>
+                                            <constraint firstItem="cR6-xc-yQc" firstAttribute="top" secondItem="mDt-Ih-WCJ" secondAttribute="top" constant="177" id="YcT-bB-yrh"/>
+                                            <constraint firstAttribute="trailing" secondItem="y3k-vk-Icl" secondAttribute="trailing" constant="46" id="fqi-7W-uaS"/>
+                                            <constraint firstItem="cR6-xc-yQc" firstAttribute="top" secondItem="y3k-vk-Icl" secondAttribute="bottom" constant="8" id="wOf-Nw-CSc"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="image" destination="y3k-vk-Icl" id="gxv-5U-QQl"/>
+                                            <outlet property="name" destination="cR6-xc-yQc" id="yh1-nz-ZZa"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rG2-Za-YWN">
+                                <rect key="frame" x="164" y="178" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show Drinks"/>
+                                <connections>
+                                    <action selector="showDrinks:" destination="m0g-SN-2P3" eventType="touchUpInside" id="uqs-GI-Q8w"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GbN-7c-1pZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Kh9-An-y6l" id="6Jq-vC-YuU"/>
+                        <outlet property="ingredient" destination="vMm-oh-QSu" id="nJt-yX-ctX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fp9-ZB-f4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2562.3188405797105" y="-398.4375"/>
         </scene>
     </scenes>
 </document>
