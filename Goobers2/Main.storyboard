@@ -285,10 +285,10 @@
             </objects>
             <point key="canvasLocation" x="-436.23188405797106" y="-258.48214285714283"/>
         </scene>
-        <!--View Controller-->
+        <!--Manage Party View-->
         <scene sceneID="G6b-ST-Q4Y">
             <objects>
-                <viewController id="evL-qI-6yf" sceneMemberID="viewController">
+                <viewController id="evL-qI-6yf" customClass="ManagePartyView" customModule="Goobers2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SLz-If-9ZV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

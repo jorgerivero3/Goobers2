@@ -52,7 +52,7 @@ class PartiesCollectionViewController: UICollectionViewController {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "summary", for: indexPath) as! CustomCollectionViewCell
 
-        // crude implementation of populating party details that will be changed later
+          //crude implementation of populating party details that will be changed later
 //        if indexPath.row == 0 {
 //            cell.title.text = p1.name
 //            cell.desc.text = p1.desc
@@ -90,7 +90,7 @@ class PartiesCollectionViewController: UICollectionViewController {
 //            cell.button.isEnabled = true
 //            cell.button.setTitle("Invite Someone", for: .normal)
 //
-//        }
+//       }
 
 
 

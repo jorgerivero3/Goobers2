@@ -17,6 +17,8 @@
 		305186B4227131D200CB75A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305186AA227131D200CB75A6 /* Main.storyboard */; };
 		305186B5227131D200CB75A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305186AB227131D200CB75A6 /* LaunchScreen.storyboard */; };
 		305186B6227131D200CB75A6 /* PartiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305186AC227131D200CB75A6 /* PartiesViewController.swift */; };
+		30B0009B2273C3DD00776085 /* ContactsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0009A2273C3DD00776085 /* ContactsStruct.swift */; };
+		30B0009D2273C4DB00776085 /* ManagePartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0009C2273C4DB00776085 /* ManagePartyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		305186AA227131D200CB75A6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		305186AB227131D200CB75A6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		305186AC227131D200CB75A6 /* PartiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartiesViewController.swift; sourceTree = "<group>"; };
+		30B0009A2273C3DD00776085 /* ContactsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsStruct.swift; sourceTree = "<group>"; };
+		30B0009C2273C4DB00776085 /* ManagePartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagePartyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +76,13 @@
 				305186AB227131D200CB75A6 /* LaunchScreen.storyboard */,
 				305186AA227131D200CB75A6 /* Main.storyboard */,
 				305186A5227131D100CB75A6 /* PartiesCollectionViewController.swift */,
+				30B0009A2273C3DD00776085 /* ContactsStruct.swift */,
 				305186AC227131D200CB75A6 /* PartiesViewController.swift */,
 				305186A9227131D200CB75A6 /* PartyTableViewCell.swift */,
 				3051869C227131AD00CB75A6 /* Info.plist */,
 				305186A2227131D100CB75A6 /* Goobers2-Bridging-Header.h */,
 				0411854E22724CE200682A30 /* dateStore.xcdatamodeld */,
+				30B0009C2273C4DB00776085 /* ManagePartyView.swift */,
 			);
 			path = Goobers2;
 			sourceTree = "<group>";
@@ -154,8 +160,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0411855022724CE200682A30 /* dateStore.xcdatamodeld in Sources */,
+				30B0009D2273C4DB00776085 /* ManagePartyView.swift in Sources */,
 				305186B2227131D200CB75A6 /* AppDelegate.swift in Sources */,
 				305186AF227131D200CB75A6 /* PartiesCollectionViewController.swift in Sources */,
+				30B0009B2273C3DD00776085 /* ContactsStruct.swift in Sources */,
 				305186B3227131D200CB75A6 /* PartyTableViewCell.swift in Sources */,
 				0411855622738ABA00682A30 /* newPartyView.swift in Sources */,
 				305186B6227131D200CB75A6 /* PartiesViewController.swift in Sources */,
