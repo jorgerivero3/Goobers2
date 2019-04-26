@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--New Party View-->
         <scene sceneID="ZZK-EF-3vs">
             <objects>
-                <viewController id="DIe-OM-n8D" sceneMemberID="viewController">
+                <viewController id="DIe-OM-n8D" customClass="newPartyView" customModule="Goobers2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3FF-Rs-p28">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,6 +68,10 @@
                                 <rect key="frame" x="113" y="788" width="188" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save Party!"/>
+                                <connections>
+                                    <action selector="newParty:" destination="DIe-OM-n8D" eventType="touchUpInside" id="Suj-9M-zB2"/>
+                                    <segue destination="8bW-7C-DMd" kind="show" id="tR7-uK-rN0"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="W6U-Ij-stU">
                                 <rect key="frame" x="0.0" y="489" width="414" height="103"/>
@@ -95,6 +99,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yal-we-bXG"/>
                     </view>
+                    <connections>
+                        <outlet property="pDate" destination="W6U-Ij-stU" id="sNf-oS-rTf"/>
+                        <outlet property="pDesc" destination="Tnj-UO-4MZ" id="xb2-hg-EFh"/>
+                        <outlet property="pName" destination="zX4-4p-605" id="KQd-ji-F2h"/>
+                        <outlet property="pPlace" destination="pu9-Ji-dXI" id="bvA-1e-feN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHL-YZ-lD4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,7 +113,7 @@
         <!--Parties View Controller-->
         <scene sceneID="HJh-8W-abi">
             <objects>
-                <tableViewController id="8bW-7C-DMd" customClass="PartiesViewController" customModule="Goobers" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="8bW-7C-DMd" customClass="PartiesViewController" customModule="Goobers2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ItJ-3T-YL0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +127,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="party" rowHeight="152" id="5Z3-LE-kG6" customClass="PartyTableViewCell" customModule="Goobers" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="party" rowHeight="152" id="5Z3-LE-kG6" customClass="PartyTableViewCell" customModule="Goobers2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="414" height="152"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Z3-LE-kG6" id="f3O-3Z-jIw">
@@ -186,6 +196,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="partyList" destination="ItJ-3T-YL0" id="bFc-Nn-oYP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ta-Ip-0l4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,7 +207,7 @@
         <!--Parties Collection View Controller-->
         <scene sceneID="538-9y-DmV">
             <objects>
-                <collectionViewController id="3b0-hy-ucq" customClass="PartiesCollectionViewController" customModule="Goobers" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="3b0-hy-ucq" customClass="PartiesCollectionViewController" customModule="Goobers2" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4ti-ZZ-diU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,7 +219,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="summary" id="lp4-Er-Z5E" customClass="CustomCollectionViewCell" customModule="Goobers" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="summary" id="lp4-Er-Z5E" customClass="CustomCollectionViewCell" customModule="Goobers2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="294"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -318,4 +331,7 @@
             <point key="canvasLocation" x="1309" y="-1063"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tR7-uK-rN0"/>
+    </inferredMetricsTieBreakers>
 </document>
