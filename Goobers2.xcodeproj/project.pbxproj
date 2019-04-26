@@ -21,7 +21,7 @@
 
 /* Begin PBXFileReference section */
 		0411854F22724CE200682A30 /* dateStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dateStore.xcdatamodel; sourceTree = "<group>"; };
-		0411855522738ABA00682A30 /* newPartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = newPartyView.swift; path = ../newPartyView.swift; sourceTree = "<group>"; };
+		0411855522738ABA00682A30 /* newPartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPartyView.swift; sourceTree = "<group>"; };
 		3051868A227131AC00CB75A6 /* Goobers2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goobers2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3051869C227131AD00CB75A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		305186A2227131D100CB75A6 /* Goobers2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Goobers2-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -66,8 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				305186A8227131D200CB75A6 /* AppDelegate.swift */,
-				0411855522738ABA00682A30 /* newPartyView.swift */,
 				305186A4227131D100CB75A6 /* Assets.xcassets */,
+				0411855522738ABA00682A30 /* newPartyView.swift */,
 				305186A6227131D200CB75A6 /* CustomCollectionViewCell.swift */,
 				305186AB227131D200CB75A6 /* LaunchScreen.storyboard */,
 				305186AA227131D200CB75A6 /* Main.storyboard */,
